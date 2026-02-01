@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"AbstractShape","h":"","u":""},{"l":"Circle","h":"","u":""},{"l":"Point2D","h":"","u":""},{"l":"Rectangle","h":"","u":""},{"l":"Shape","h":"","u":""},{"l":"ShapeTest","h":"","u":""},{"l":"Triangle","h":"","u":""},{"l":"所有类","h":"","u":"allclasses-index.html"}]
