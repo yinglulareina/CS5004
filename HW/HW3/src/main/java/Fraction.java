@@ -3,28 +3,46 @@
  * It extends Comparable to provide ordering based on the fraction's value.
  */
 public interface Fraction extends Comparable<Fraction> {
-    /** @return the numerator of this fraction */
+    /**
+     * Gets the numerator of this fraction.
+     * @return the numerator of this fraction */
     int getNumerator();
 
-    /** @return the denominator of this fraction */
+    /**
+     * Gets the denominator of this fraction.
+     * @return the denominator of this fraction */
     int getDenominator();
 
-    /** @param n the new numerator */
+    /**
+     * Sets the numerator of this fraction.
+     * @param n the new numerator */
     void setNumerator(int n);
 
-    /** @param d the new numerator */
+    /**
+     * Sets the denominator of this fraction.
+     * @param d the new numerator */
     void setDenominator(int d);
 
-    /** @return the decimal value of the fraction */
+    /**
+     * Returns the decimal value of the fraction (numerator / denominator).
+     * @return the decimal value of the fraction */
     double toDouble();
 
-    /** @return a new fraction that is the reciprocal of the current one */
+    /**
+     * Returns a new fraction that is the reciprocal of the current one.
+     * @return a new fraction that is the reciprocal of the current one */
     Fraction reciprocal();
 
-    /** @param other the fraction to add */
+    /**
+     * Adds the specified fraction to this fraction.
+     * @param other the fraction to add
+     * @return a new fraction that is the sum */
     Fraction add(Fraction other);
 
-    /** @param other the fraction to compare to */
+    /**
+     * Compares this fraction with the specified fraction for order.
+     * @param other the fraction to compare to
+     * @return a negative integer, zero, or a positive integer */
     @Override
     int compareTo(Fraction other);
 }
