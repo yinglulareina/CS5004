@@ -1,0 +1,41 @@
+@startuml Lab5_Problem2
+
+skinparam classAttributeIconSize 0
+skinparam style strictuml
+
+interface IListOfStrings {
+    + isEmpty() : boolean
+    + size() : int
+    + contains(s : String) : boolean
+    + containsAll(other : IListOfStrings) : boolean
+    + filterLargerThan(maxLength : int) : IListOfStrings
+    + hasDuplicates() : boolean
+    + removeDuplicates() : IListOfStrings
+    + addFront(s : String) : void
+    + toString() : String
+}
+
+class LinkedListOfStrings {
+    - head : Node
+    + isEmpty() : boolean
+    + size() : int
+    + contains(s : String) : boolean
+    + containsAll(other : IListOfStrings) : boolean
+    + filterLargerThan(maxLength : int) : IListOfStrings
+    + hasDuplicates() : boolean
+    + removeDuplicates() : IListOfStrings
+    + addFront(s : String) : void
+    + addBack(s : String) : void
+    + toString() : String
+}
+
+class Node {
+    ~ value : String
+    ~ next : Node
+}
+
+IListOfStrings <|.. LinkedListOfStrings
+LinkedListOfStrings *-- Node
+Node --> Node : next
+
+@enduml

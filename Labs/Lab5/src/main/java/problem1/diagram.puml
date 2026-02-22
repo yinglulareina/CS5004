@@ -1,0 +1,75 @@
+@startuml Lab5_Problem1
+
+skinparam classAttributeIconSize 0
+skinparam style strictuml
+
+abstract class Artist {
+    - name : Name
+    - age : int
+    - genres : String[]
+    - awards : String[]
+    + getName() : Name
+    + getAge() : int
+    + getGenres() : String[]
+    + getAwards() : String[]
+    + receiveAward(award : String) : void
+}
+
+class Name {
+    - firstName : String
+    - lastName : String
+    + getFirstName() : String
+    + getLastName() : String
+    + toString() : String
+}
+
+abstract class ScreenArtist {
+    - movies : String[]
+    - series : String[]
+    - otherMultimedia : String[]
+    + getMovies() : String[]
+    + getSeries() : String[]
+    + getOtherMultimedia() : String[]
+}
+
+abstract class VisualArtist {
+    - exhibits : String[]
+    + getExhibits() : String[]
+}
+
+class Actor
+class Dancer
+class Filmmaker
+
+class Painter
+class Photographer
+
+class Musician {
+    - recordingCompany : String
+    - lastRecordAlbum : String
+    + getRecordingCompany() : String
+    + getLastRecordAlbum() : String
+}
+
+class Poet {
+    - publishingCompany : String
+    - lastPublishedCollection : String
+    + getPublishingCompany() : String
+    + getLastPublishedCollection() : String
+}
+
+Artist *-- Name
+
+Artist <|-- ScreenArtist
+Artist <|-- VisualArtist
+Artist <|-- Musician
+Artist <|-- Poet
+
+ScreenArtist <|-- Actor
+ScreenArtist <|-- Dancer
+ScreenArtist <|-- Filmmaker
+
+VisualArtist <|-- Painter
+VisualArtist <|-- Photographer
+
+@enduml
