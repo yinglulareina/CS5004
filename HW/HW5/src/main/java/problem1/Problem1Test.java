@@ -4,8 +4,7 @@ import java.time.LocalDateTime;
 
 /**
  * Test class to verify donation calculation logic.
- * This class is for local testing and does not need to be part of the final submission
- * unless required by your specific instructor.
+ * This class is for local testing.
  */
 public class Problem1Test {
     public static void main(String[] args) {

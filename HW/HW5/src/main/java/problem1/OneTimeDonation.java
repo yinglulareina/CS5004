@@ -10,7 +10,7 @@ public class OneTimeDonation extends Donation {
 
     @Override
     public double getAmountForYear(int year) {
-        // Included only in the year the donation was created [cite: 29, 111]
+        // Included only in the year the donation was created
         if (this.creationTimestamp.getYear() == year) {
             return this.amount;
         }

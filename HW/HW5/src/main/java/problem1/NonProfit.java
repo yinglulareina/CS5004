@@ -5,7 +5,7 @@ import java.util.Collection;
 
 public class NonProfit {
     private String name;
-    private Collection<Donation> donations; // Tracks a collection of all donations [cite: 26, 107]
+    private Collection<Donation> donations; // Tracks a collection of all donations
 
     public NonProfit(String name) {
         this.name = name;
@@ -17,7 +17,7 @@ public class NonProfit {
     }
 
     /**
-     * Calculates the sum of all donations processed in the specified year[cite: 27, 108].
+     * Calculates the sum of all donations processed in the specified year.
      * Uses subtype polymorphism to call getAmountForYear on different donation types.
      */
     public double getTotalDonationsForYear(int year) {

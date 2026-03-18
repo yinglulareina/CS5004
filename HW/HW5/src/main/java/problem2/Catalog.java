@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Stores items and provides overloaded search functionality[cite: 51, 52, 55, 134].
+ * Stores items and provides overloaded search functionality.
  */
 public class Catalog {
     private List<Item> items;
@@ -16,7 +16,7 @@ public class Catalog {
     public void removeItem(Item item) { items.remove(item); }
 
     /**
-     * Search by keyword in title (Case-insensitive)[cite: 57, 59, 136, 138].
+     * Search by keyword in title (Case-insensitive).
      */
     public List<Item> search(String keyword) {
         List<Item> result = new ArrayList<>();
@@ -29,7 +29,7 @@ public class Catalog {
     }
 
     /**
-     * Search for books by an exact Author match[cite: 60, 61, 139, 140].
+     * Search for books by an exact Author match.
      */
     public List<Item> search(Author author) {
         List<Item> result = new ArrayList<>();
@@ -42,7 +42,7 @@ public class Catalog {
     }
 
     /**
-     * Search for music by Recording Artist (Solo or Band member)[cite: 62, 64, 141, 143].
+     * Search for music by Recording Artist (Solo or Band member).
      */
     public List<Item> search(RecordingArtist artist) {
         List<Item> result = new ArrayList<>();

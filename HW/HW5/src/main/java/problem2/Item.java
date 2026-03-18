@@ -1,7 +1,7 @@
 package problem2;
 
 /**
- * Base class for all library items (Books and Music)[cite: 38, 121].
+ * Base class for all library items (Books and Music).
  */
 public abstract class Item {
     protected String title;

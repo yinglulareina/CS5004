@@ -7,11 +7,11 @@ public class Pledge extends Donation {
 
     public Pledge(double amount, LocalDateTime creationTimestamp) {
         super(amount, creationTimestamp);
-        this.processingTimestamp = null; // Processing date may or may not be provided [cite: 21, 102]
+        this.processingTimestamp = null; // Processing date may or may not be provided
     }
 
     /**
-     * Updates processing date, ensuring it's not before creation[cite: 23, 104].
+     * Updates processing date, ensuring it's not before creation.
      */
     public void setProcessingTimestamp(LocalDateTime processingTimestamp) {
         if (processingTimestamp != null && processingTimestamp.isBefore(this.creationTimestamp)) {
@@ -22,11 +22,11 @@ public class Pledge extends Donation {
 
     @Override
     public double getAmountForYear(int year) {
-        // Only included in the year the donation is processed [cite: 32, 114]
+        // Only included in the year the donation is processed
         if (processingTimestamp != null && processingTimestamp.getYear() == year) {
             return this.amount;
         }
-        // Not included if no processing date is set [cite: 33, 115]
+        // Not included if no processing date is set
         return 0.0;
     }
 }

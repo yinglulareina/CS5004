@@ -7,11 +7,11 @@ public class MonthlyDonation extends Donation {
 
     public MonthlyDonation(double amount, LocalDateTime creationTimestamp) {
         super(amount, creationTimestamp);
-        this.cancellationTimestamp = null; // No cancellation date when first created [cite: 17, 98]
+        this.cancellationTimestamp = null; // No cancellation date when first created
     }
 
     /**
-     * Sets the cancellation date, ensuring it's not before creation[cite: 18, 99].
+     * Sets the cancellation date, ensuring it's not before creation.
      */
     public void setCancellationTimestamp(LocalDateTime cancellationTimestamp) {
         if (cancellationTimestamp.isBefore(this.creationTimestamp)) {
@@ -23,7 +23,7 @@ public class MonthlyDonation extends Donation {
     @Override
     public double getAmountForYear(int year) {
         double total = 0.0;
-        // Start from the creation date and check each month of the year [cite: 31, 113]
+        // Start from the creation date and check each month of the year
         LocalDateTime current = this.creationTimestamp;
 
         // If creation is after the target year, or if canceled before the target year
@@ -34,7 +34,7 @@ public class MonthlyDonation extends Donation {
         // Iterate through months until we exceed the target year
         while (current.getYear() <= year) {
             if (current.getYear() == year) {
-                // Only add if not canceled yet [cite: 31, 113]
+                // Only add if not canceled yet
                 if (cancellationTimestamp == null || !current.isAfter(cancellationTimestamp)) {
                     total += this.amount;
                 }

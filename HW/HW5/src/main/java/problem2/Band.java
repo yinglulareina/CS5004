@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.Objects;
 
 /**
- * Represents a Band consisting of Recording Artists[cite: 45, 46, 47, 126].
+ * Represents a Band consisting of Recording Artists.
  */
 public class Band extends Creator {
     private String name;
